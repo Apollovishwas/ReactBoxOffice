@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ReactBoxOffice/static/css/main.b2586571.css",
-    "main.js": "/ReactBoxOffice/static/js/main.5415f06f.js",
+    "main.js": "/ReactBoxOffice/static/js/main.66dba2f8.js",
     "static/js/787.4c31781c.chunk.js": "/ReactBoxOffice/static/js/787.4c31781c.chunk.js",
     "index.html": "/ReactBoxOffice/index.html",
     "static/media/Details": "/ReactBoxOffice/static/media/Details.31d6cfe0d16ae931b73c",
     "main.b2586571.css.map": "/ReactBoxOffice/static/css/main.b2586571.css.map",
-    "main.5415f06f.js.map": "/ReactBoxOffice/static/js/main.5415f06f.js.map",
+    "main.66dba2f8.js.map": "/ReactBoxOffice/static/js/main.66dba2f8.js.map",
     "787.4c31781c.chunk.js.map": "/ReactBoxOffice/static/js/787.4c31781c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b2586571.css",
-    "static/js/main.5415f06f.js"
+    "static/js/main.66dba2f8.js"
   ]
 }

@@ -1,6 +1,11 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import { apiGet } from "../misc/config";
+import ShowMainData from "../Components/show/ShowMainData";
+import Details from "../Components/show/Details";
+import Seasons from "../Components/show/Seasons";
+import Cast from "../Components/show/Cast";
+import { InfoBlock, ShowPageWrapper } from "./Show.styled";
 
 const initialState = {
   show: null,
@@ -44,11 +49,8 @@ const Show = () => {
 
     return () => {
       isMount = false;
-      console.log(show, isLoading, error);
     };
   }, [id]);
-
-  console.log(show);
 
   if (isLoading) {
     return <div>this is show page</div>;
@@ -58,7 +60,34 @@ const Show = () => {
     return <div>Error Occured {error}</div>;
   }
 
-  return <div>{show.summary}</div>;
+  return (
+    <ShowPageWrapper>
+      <ShowMainData
+        image={show.image}
+        name={show.name}
+        rating={show.rating}
+        summary={show.summary}
+        tags={show.genres}
+      />
+      <InfoBlock>
+        <h2>Details</h2>
+        <Details
+          status={show.status}
+          network={show.network}
+          premiere={show.premiere}
+        />
+      </InfoBlock>
+      <InfoBlock>
+        <h2>Seasons</h2>
+        <Seasons seasons={show._embedded.seasons} />
+      </InfoBlock>
+
+      <InfoBlock>
+        <h2>Cast</h2>
+        <Cast cast={show._embedded.cast} />
+      </InfoBlock>
+    </ShowPageWrapper>
+  );
 };
 
 export default Show;
